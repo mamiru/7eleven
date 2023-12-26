@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fullPage.js 스타일 시트를 CDN에서 불러옵니다. -->
+    <!-- fullPage플러그인 공식사이트 - https://alvarotrigo.com/fullPage/extensions/ -->
+
+    <title> 7-ELEVEN - 홍미령 </title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/jquery.easing.1.3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/sharp-solid.css">        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.0/css/sharp-light.css">
+
+
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="headerInner">
+                <h1 class="logo">
+                    <a href="./index.html"><img src="./images/logo.png" alt="로고"></a>
+                </h1>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#a1">7-ELEVEN</a></li>
+                        <li><a href="#a2">상품 서비스</a></li>
+                        <li><a href="#a3">매장안내</a></li>
+                        <li><a href="#a4">EVENT</a></li>
+                        <li><a href="#a5">창업안내</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+        </header>
+
+
+        <main>
+
+        <div id="fullpage">
+            <div class="section">
+                <section id="main_slides">
+                    <!-- <h2 class="blind">메인슬라이드</h2> -->
+                    <!-- .swiper.mySwiper -->
+                    <div class="swiper mySwiper">
+    
+                        <!-- 스와이퍼 슬라이드 -->
+                        <!-- .swiper-wrapper -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                        </div>
+                        <!-- 인디케이터 -->
+                        <!-- .swiper-pagination.slides-pagenation -->
+                        <div class="swiper-pagination slides-pagenation"></div>
+                        <!-- 이전,다음버튼 -->
+                        <!-- .swiper-button-prev -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </section>
+             </div>
+
+
+
+            <div class="section"> 
+                <img src="./images/bg2.jpg" alt="메인1">
+            </div>
+
+
+
+            <div class="section"> 
+                <div class="main">
+                    <h1>매장 찾기</h1>
+                    <h2>근처에 있는 매장 찾기</h2>
+                    <div class="search-container">
+                        <!-- 검색 입력창 -->
+                        <div class="search-box">
+                            <input type="search" id="searchInput" placeholder="검색어를 입력하세요">
+                            <!-- 검색 버튼 -->
+                            <button onclick="search()" id="searchBtn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section"> 
+                <img src="./images/bg4.jpg" alt="메인1">
+            </div>
+
+            <div class="section"> 
+                <img src="./images/bg5.jpg" alt="메인1">
+            </div>
+                
+            <div class="section"> 
+                <img src="./images/bg6.jpg" alt="메인1">
+            </div>
+
+        </div>
+
+        </main>
+
+
+
+
+
+
+
+    </div>
+    <!-- fullPage.js 스크립트를 CDN에서 불러옵니다. -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+
+
+
+
+
+    <script>
+    // swiper plugin
+    var swiper = new Swiper(".mySwiper", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                autoplay: {
+                    delay: 2000, // 슬라이드 간의 간격을 밀리초 단위로 설정 (예: 2000 밀리초 = 2초)
+                    disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 슬라이드 계속
+                },
+            });
+            // slick plugin
+            $(function(){
+                $(".banner_slider").slick({
+                    autoplay: true, // 자동재생 활성화 
+                    autoplaySpeed: 1000, 
+                    infinite: true, // 무한반복슬라이드
+                    slidesToShow: 3, // 보이는 슬라이드 갯수 
+                    dots: false, // 인디케이터 비활성화 (보이게하려면true )                
+                    focusOnSelect: true, //  슬라이드 선택시 포커스
+                    arrows: true, // 이전, 다음 화살표
+                    // speed: 200,  // 2초 (주석)
+                    conterPadding: '120px', // 중앙 슬라이드와의간격
+                    // prevArrow: $("#BtnPrev"), // 이전 화살표 선택
+                    // nextArrow: $("#BtnNext"), // 다음 화살표 선택
+                    centerMode: true // 중앙 슬라이드 모드 활성화 
+            
+                });
+            });
+
+    new fullpage('#fullpage', {
+    autoScrolling: true,  // 자동 스크롤 기능 활성화
+    scrollHorizontally: true,  // 수평 스크롤 활성화
+    navigation: true,  // 내비게이션 (점 또는 버튼)을 표시하여 사용자가 스크롤 위치를 선택할 수 있게 함
+    });
+
+    // 검색 함수
+    function search() {
+        // 검색어 가져오기
+        var searchInput = document.getElementById("searchInput");
+        var searchInputValue = searchInput.value;
+
+        // 실제로는 여기에서 검색 로직을 수행하면 됩니다.
+        // 예를 들어, 검색어로 서버에 요청을 보내거나 다른 작업을 수행할 수 있습니다.
+
+        // 여기에서는 검색어를 콘솔에 출력하는 예제를 보여줍니다.
+        console.log("검색어:", searchInputValue);
+
+        // Set focus on the search input after the search button is clicked
+        searchInput.focus();
+    }
+
+	</script>
+
+</body>
+</html>
